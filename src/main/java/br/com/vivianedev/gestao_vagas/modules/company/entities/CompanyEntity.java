@@ -1,4 +1,4 @@
-package br.com.vivianedev.gestao_vagas.modules.candidate.useCase;
+package br.com.vivianedev.gestao_vagas.modules.company.entities;
 
 import java.time.LocalDateTime;
 import java.util.UUID;
