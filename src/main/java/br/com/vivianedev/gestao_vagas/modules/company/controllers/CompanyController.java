@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.vivianedev.gestao_vagas.modules.candidate.useCase.CreateCompanyUseCase;
 import br.com.vivianedev.gestao_vagas.modules.company.entities.CompanyEntity;
+import br.com.vivianedev.gestao_vagas.modules.company.useCases.CreateCompanyUseCase;
 import jakarta.validation.Valid;
 
 @RestController 
