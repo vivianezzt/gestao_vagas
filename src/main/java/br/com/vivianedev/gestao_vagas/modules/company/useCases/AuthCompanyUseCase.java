@@ -1,6 +1,7 @@
 package br.com.vivianedev.gestao_vagas.modules.company.useCases;
 
-
+import java.time.Duration;
+import java.time.Instant;
 
 import javax.naming.AuthenticationException;
 
@@ -40,10 +41,10 @@ public class AuthCompanyUseCase {
         }
         Algorithm algorithm = Algorithm.HMAC256(secretKey);
         var token = JWT.create()
+            .withExpiresAt(Instant.now().plus(Duration.ofHours(2)))
             .withIssuer("javagas")
             .withSubject(company.getId().toString())
             .sign(algorithm);
-            return token;
-
+        return token;
     }
 }
