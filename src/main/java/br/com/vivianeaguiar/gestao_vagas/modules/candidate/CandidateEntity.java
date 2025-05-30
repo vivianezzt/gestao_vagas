@@ -8,12 +8,13 @@ import java.util.UUID;
 import org.hibernate.validator.constraints.Length;
 
 import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
 
 @Data
 public class CandidateEntity {
     private UUID id;
-
+    @NotBlank()
     @Pattern(regexp = "^(?!\\s*$).+", message = "O campo (username) não pode ser vazio")
     private String username;
     private String name;
